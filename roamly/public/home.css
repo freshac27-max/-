@@ -1,0 +1,862 @@
+/* =========================================================
+   ROAMLY — HOME PAGE
+========================================================= */
+
+
+/* =========================================================
+   MAIN DASHBOARD
+========================================================= */
+
+.dashboard {
+    width: min(1700px, calc(100% - 48px));
+    margin: 26px auto 70px;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(230px, 280px)
+        minmax(500px, 1fr)
+        minmax(280px, 340px);
+
+    gap: 26px;
+
+    align-items: start;
+}
+
+
+/* =========================================================
+   SIDEBARS
+========================================================= */
+
+.left-sidebar,
+.right-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.left-sidebar {
+    position: sticky;
+    top: 102px;
+}
+
+.right-sidebar {
+    position: sticky;
+    top: 102px;
+}
+
+
+/* =========================================================
+   PROFILE CARD
+========================================================= */
+
+.profile-card {
+    overflow: hidden;
+}
+
+.profile-cover {
+    height: 80px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--purple),
+            #9b86ff
+        );
+}
+
+.profile-content {
+    padding: 0 20px 20px;
+}
+
+.profile-avatar {
+    width: 64px;
+    height: 64px;
+
+    margin-top: -32px;
+
+    border: 4px solid white;
+
+    font-size: 20px;
+}
+
+.profile-content h2 {
+    margin: 13px 0 2px;
+
+    font-size: 18px;
+    letter-spacing: -0.5px;
+}
+
+.username {
+    margin: 0;
+
+    font-size: 11px;
+    color: var(--text-soft);
+}
+
+
+/* =========================================================
+   PROFILE STATS
+========================================================= */
+
+.profile-stats {
+    margin: 20px 0;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.profile-stats > div {
+    padding: 15px 5px;
+
+    text-align: center;
+}
+
+.profile-stats > div:not(:last-child) {
+    border-right: 1px solid var(--border);
+}
+
+.profile-stats strong {
+    display: block;
+
+    margin-bottom: 4px;
+
+    font-size: 15px;
+}
+
+.profile-stats span {
+    display: block;
+
+    color: var(--text-soft);
+
+    font-size: 9px;
+}
+
+.profile-travels-button {
+    width: 100%;
+    min-height: 39px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: var(--purple-light);
+
+    color: var(--purple);
+
+    font-size: 11px;
+    font-weight: 700;
+
+    transition: 0.2s ease;
+}
+
+.profile-travels-button:hover {
+    background: var(--purple);
+    color: white;
+}
+
+
+/* =========================================================
+   SHARED SIDEBAR CARD
+========================================================= */
+
+.sidebar-card {
+    padding: 20px;
+}
+
+.section-label {
+    display: block;
+
+    color: var(--purple);
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: 1.4px;
+}
+
+.sidebar-heading {
+    margin-bottom: 17px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sidebar-heading a {
+    color: var(--purple);
+
+    font-size: 10px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   MINI EMPTY STATES
+========================================================= */
+
+.empty-mini-state {
+    padding: 22px 8px 7px;
+
+    text-align: center;
+}
+
+.mini-icon {
+    display: block;
+
+    margin-bottom: 10px;
+
+    font-size: 26px;
+}
+
+.empty-mini-state strong {
+    display: block;
+
+    margin-bottom: 6px;
+
+    font-size: 11px;
+}
+
+.empty-mini-state p {
+    max-width: 190px;
+
+    margin: 0 auto;
+
+    color: var(--text-soft);
+
+    font-size: 10px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   FEED
+========================================================= */
+
+.feed {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+.feed-heading {
+    padding: 5px 2px 2px;
+}
+
+.feed-heading h1 {
+    margin: 7px 0 7px;
+
+    font-size: clamp(26px, 3vw, 36px);
+
+    letter-spacing: -1.5px;
+}
+
+.feed-heading p {
+    margin: 0;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   POST COMPOSER
+========================================================= */
+
+.post-composer {
+    padding: 18px;
+}
+
+.composer-top {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+}
+
+.composer-avatar {
+    width: 41px;
+    height: 41px;
+
+    font-size: 12px;
+}
+
+.composer-input {
+    flex: 1;
+
+    height: 43px;
+
+    padding: 0 16px;
+
+    border: 1px solid var(--border);
+    border-radius: 12px;
+
+    background: #f8f8fb;
+
+    color: #9999a4;
+
+    text-align: left;
+
+    font-size: 11px;
+
+    transition: 0.2s ease;
+}
+
+.composer-input:hover {
+    background: white;
+    border-color: #d8d0ff;
+}
+
+.composer-actions {
+    margin-top: 15px;
+    padding-top: 13px;
+
+    display: flex;
+
+    border-top: 1px solid var(--border);
+}
+
+.composer-actions button {
+    flex: 1;
+
+    padding: 7px;
+
+    border: none;
+
+    background: transparent;
+
+    color: var(--text-soft);
+
+    font-size: 10px;
+    font-weight: 600;
+
+    transition: 0.2s ease;
+}
+
+.composer-actions button:hover {
+    color: var(--purple);
+    background: #faf9ff;
+
+    border-radius: 8px;
+}
+
+
+/* =========================================================
+   TRAVEL POSTS
+========================================================= */
+
+.travel-post {
+    padding: 21px;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.post-user {
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+}
+
+.friend-avatar {
+    width: 40px;
+    height: 40px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ddd6ff,
+            #bbaeff
+        );
+
+    color: var(--purple-dark);
+
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.post-user strong {
+    display: block;
+
+    margin-bottom: 3px;
+
+    font-size: 11px;
+}
+
+.post-user span {
+    display: block;
+
+    color: var(--text-soft);
+
+    font-size: 9px;
+}
+
+.more-button {
+    border: none;
+    background: transparent;
+
+    color: var(--text-soft);
+
+    font-weight: 700;
+}
+
+.post-content p {
+    margin: 18px 0;
+
+    color: #40404a;
+
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   POST LOCATION
+========================================================= */
+
+.post-location {
+    min-height: 88px;
+
+    padding: 17px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    border: 1px solid var(--border);
+    border-radius: 13px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #faf9ff,
+            #f5f6fb
+        );
+}
+
+.post-location > span {
+    font-size: 34px;
+}
+
+.post-location strong {
+    display: block;
+
+    margin-bottom: 3px;
+
+    font-size: 12px;
+}
+
+.post-location div span {
+    color: var(--text-soft);
+
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   POST FOOTER
+========================================================= */
+
+.post-footer {
+    margin-top: 15px;
+    padding-top: 13px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    border-top: 1px solid var(--border);
+}
+
+.post-footer button {
+    padding: 3px 0;
+
+    border: none;
+
+    background: transparent;
+
+    color: var(--text-soft);
+
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.post-footer button:hover {
+    color: var(--purple);
+}
+
+.post-footer .post-share {
+    margin-left: auto;
+}
+
+
+/* =========================================================
+   WORLD PROGRESS
+========================================================= */
+
+.world-progress {
+    padding-top: 4px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+}
+
+.progress-circle {
+    width: 76px;
+    height: 76px;
+
+    flex-shrink: 0;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+
+    background:
+        conic-gradient(
+            var(--purple) 0%,
+            #ededf3 0%
+        );
+
+    position: relative;
+}
+
+.progress-circle::before {
+    content: "";
+
+    position: absolute;
+
+    width: 61px;
+    height: 61px;
+
+    border-radius: 50%;
+
+    background: white;
+}
+
+.progress-circle > div {
+    position: relative;
+
+    z-index: 2;
+
+    text-align: center;
+}
+
+.progress-circle strong {
+    display: block;
+
+    font-size: 17px;
+}
+
+.progress-circle span {
+    display: block;
+
+    color: var(--text-soft);
+
+    font-size: 7px;
+}
+
+.progress-copy strong {
+    display: block;
+
+    margin-bottom: 5px;
+
+    font-size: 11px;
+}
+
+.progress-copy p {
+    margin: 0;
+
+    font-size: 9px;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   CHALLENGES
+========================================================= */
+
+.challenge {
+    display: flex;
+
+    gap: 11px;
+
+    padding: 13px 0;
+}
+
+.challenge + .challenge {
+    border-top: 1px solid var(--border);
+}
+
+.challenge-icon {
+    width: 39px;
+    height: 39px;
+
+    flex-shrink: 0;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 10px;
+
+    background: var(--purple-light);
+
+    font-size: 20px;
+}
+
+.challenge-info {
+    flex: 1;
+
+    min-width: 0;
+}
+
+.challenge-info strong {
+    display: block;
+
+    margin-bottom: 3px;
+
+    font-size: 10px;
+}
+
+.challenge-info > span {
+    display: block;
+
+    color: var(--text-soft);
+
+    font-size: 8px;
+}
+
+.mini-progress {
+    width: 100%;
+    height: 5px;
+
+    margin: 9px 0 5px;
+
+    overflow: hidden;
+
+    border-radius: 100px;
+
+    background: #ededf3;
+}
+
+.mini-progress div {
+    height: 100%;
+
+    border-radius: inherit;
+
+    background: var(--purple);
+}
+
+.challenge-info small {
+    color: var(--text-soft);
+
+    font-size: 8px;
+}
+
+
+/* =========================================================
+   BADGES
+========================================================= */
+
+.badges {
+    margin-top: 16px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 8px;
+}
+
+.badge {
+    aspect-ratio: 1;
+
+    display: grid;
+    place-items: center;
+
+    border: 1px solid var(--border);
+    border-radius: 12px;
+
+    background: #fafafd;
+
+    font-size: 19px;
+}
+
+.badge.locked {
+    filter: grayscale(1);
+    opacity: 0.45;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1200px) {
+
+    .dashboard {
+        grid-template-columns:
+            230px
+            minmax(450px, 1fr)
+            280px;
+
+        gap: 18px;
+    }
+
+}
+
+
+@media (max-width: 1000px) {
+
+    .dashboard {
+        grid-template-columns:
+            220px
+            minmax(0, 1fr);
+    }
+
+    .right-sidebar {
+        display: none;
+    }
+
+}
+
+
+@media (max-width: 750px) {
+
+    .dashboard {
+        width: calc(100% - 30px);
+
+        margin-top: 20px;
+
+        grid-template-columns: 1fr;
+    }
+
+    .left-sidebar {
+        display: none;
+    }
+
+    .feed-heading h1 {
+        font-size: 28px;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .travel-post,
+    .post-composer {
+        padding: 16px;
+    }
+
+    .composer-actions button {
+        font-size: 9px;
+    }
+
+}
+
+
+/* =========================================================
+   FLAG IMAGES
+========================================================= */
+
+.flag-img {
+    display: block;
+
+    object-fit: cover;
+
+    border-radius: 5px;
+
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.07);
+}
+
+.post-location > .flag-img {
+    width: 52px;
+    height: 39px;
+
+    flex-shrink: 0;
+
+    border-radius: 7px;
+}
+
+
+/* =========================================================
+   RECENT VISITS LIST
+========================================================= */
+
+.recent-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+.recent-item {
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+}
+
+.recent-item .flag-img {
+    width: 34px;
+    height: 25px;
+
+    flex-shrink: 0;
+}
+
+.recent-item strong {
+    display: block;
+
+    margin-bottom: 2px;
+
+    font-size: 11px;
+}
+
+.recent-item span {
+    color: var(--text-soft);
+
+    font-size: 9px;
+}
+
+
+/* =========================================================
+   CHALLENGE + BADGE STATES
+========================================================= */
+
+.mini-progress div {
+    transition: width 0.4s ease;
+}
+
+.challenge.completed .challenge-info small {
+    color: var(--purple);
+    font-weight: 700;
+}
+
+.badge {
+    cursor: default;
+}
+
+.badge.earned {
+    background: var(--purple-light);
+    border-color: #d9d1ff;
+}

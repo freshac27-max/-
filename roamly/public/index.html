@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Roamly</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/home.css">
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<header class="topbar">
+
+    <div class="topbar-inner">
+
+        <a class="logo" href="/">
+            ROAMLY <span>✈</span>
+        </a>
+
+        <nav class="nav-links">
+            <a class="active" href="/">Home</a>
+            <a href="#">Explore</a>
+            <a href="/travels.html">My Travels</a>
+            <a href="#">Challenges</a>
+        </nav>
+
+        <div class="nav-actions">
+
+            <div class="search">
+                <span>⌕</span>
+                <input type="text" placeholder="Search countries, users, trips...">
+            </div>
+
+            <button class="notification-button">♡</button>
+
+            <div class="nav-profile">
+                <div class="avatar small-avatar">A</div>
+                <span>Annish</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     DASHBOARD
+===================================================== -->
+
+<main class="dashboard">
+
+
+    <!-- =================================================
+         LEFT SIDEBAR
+    ================================================== -->
+
+    <aside class="left-sidebar">
+
+
+        <!-- PROFILE -->
+
+        <section class="card profile-card">
+
+            <div class="profile-cover"></div>
+
+            <div class="profile-content">
+
+                <div class="avatar profile-avatar">A</div>
+
+                <h2>Annish</h2>
+
+                <p class="username">@annish</p>
+
+                <div class="profile-stats">
+
+                    <div>
+                        <strong id="profile-country-count">0</strong>
+                        <span>Countries</span>
+                    </div>
+
+                    <div>
+                        <strong>0</strong>
+                        <span>Trips</span>
+                    </div>
+
+                    <div>
+                        <strong>0</strong>
+                        <span>Friends</span>
+                    </div>
+
+                </div>
+
+                <a class="profile-travels-button" href="/travels.html">
+                    View my travels
+                </a>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- NEXT TRIP -->
+
+        <section class="card sidebar-card">
+
+            <span class="section-label">NEXT TRIP</span>
+
+            <div class="empty-mini-state">
+                <span class="mini-icon">✈️</span>
+                <strong>No trip planned</strong>
+                <p>Start dreaming about your next destination.</p>
+            </div>
+
+        </section>
+
+
+
+        <!-- RECENT VISITS -->
+
+        <section class="card sidebar-card">
+
+            <div class="sidebar-heading">
+                <span class="section-label">RECENT VISITS</span>
+                <a href="/travels.html">View all</a>
+            </div>
+
+            <div id="recent-visits">
+
+                <div class="empty-mini-state">
+                    <span class="mini-icon">🌍</span>
+                    <p>Your visited countries will appear here.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </aside>
+
+
+
+    <!-- =================================================
+         CENTER FEED
+    ================================================== -->
+
+    <section class="feed">
+
+
+        <div class="feed-heading">
+
+            <div>
+                <span class="section-label">YOUR WORLD</span>
+                <h1>Welcome back, Annish.</h1>
+                <p>See where everyone's been exploring.</p>
+            </div>
+
+        </div>
+
+
+
+        <!-- POST COMPOSER -->
+
+        <section class="card post-composer">
+
+            <div class="composer-top">
+                <div class="avatar composer-avatar">A</div>
+                <button class="composer-input">Share your latest adventure...</button>
+            </div>
+
+            <div class="composer-actions">
+                <button>📍 Add trip</button>
+                <button>📷 Photo</button>
+                <button>⭐ Review</button>
+            </div>
+
+        </section>
+
+
+
+        <!-- POST 1 -->
+
+        <article class="card travel-post">
+
+            <div class="post-header">
+
+                <div class="post-user">
+                    <div class="friend-avatar">M</div>
+                    <div>
+                        <strong>Maya Chen</strong>
+                        <span>2 hours ago</span>
+                    </div>
+                </div>
+
+                <button class="more-button">•••</button>
+
+            </div>
+
+            <div class="post-content">
+                <p>
+                    Finally made it to Copenhagen!
+                    The architecture, canals and food
+                    have been incredible.
+                </p>
+            </div>
+
+            <div class="post-location">
+
+                <img class="flag-img" src="https://flagcdn.com/w80/dk.png" srcset="https://flagcdn.com/w160/dk.png 2x" alt="">
+
+                <div>
+                    <strong>Copenhagen</strong>
+                    <span>Denmark</span>
+                </div>
+
+            </div>
+
+            <div class="post-footer">
+                <button>♡ 24</button>
+                <button>◯ 6</button>
+                <button class="post-share">↗ Share</button>
+            </div>
+
+        </article>
+
+
+
+        <!-- POST 2 -->
+
+        <article class="card travel-post">
+
+            <div class="post-header">
+
+                <div class="post-user">
+                    <div class="friend-avatar">J</div>
+                    <div>
+                        <strong>Jordan Lee</strong>
+                        <span>Yesterday</span>
+                    </div>
+                </div>
+
+                <button class="more-button">•••</button>
+
+            </div>
+
+            <div class="post-content">
+                <p>
+                    Another country checked off the
+                    list. Prague might be one of my
+                    favourite cities in Europe.
+                </p>
+            </div>
+
+            <div class="post-location">
+
+                <img class="flag-img" src="https://flagcdn.com/w80/cz.png" srcset="https://flagcdn.com/w160/cz.png 2x" alt="">
+
+                <div>
+                    <strong>Prague</strong>
+                    <span>Czechia</span>
+                </div>
+
+            </div>
+
+            <div class="post-footer">
+                <button>♡ 41</button>
+                <button>◯ 11</button>
+                <button class="post-share">↗ Share</button>
+            </div>
+
+        </article>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         RIGHT SIDEBAR
+    ================================================== -->
+
+    <aside class="right-sidebar">
+
+
+        <!-- PROGRESS -->
+
+        <section class="card sidebar-card">
+
+            <div class="sidebar-heading">
+                <span class="section-label">YOUR PROGRESS</span>
+                <a href="/travels.html">Details</a>
+            </div>
+
+            <div class="world-progress">
+
+                <div class="progress-circle" id="progress-circle">
+                    <div>
+                        <strong id="progress-count">0</strong>
+                        <span id="progress-count-label">countries</span>
+                    </div>
+                </div>
+
+                <div class="progress-copy">
+                    <strong id="progress-title">The world is waiting.</strong>
+                    <p id="progress-text">Start marking the places you've explored.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- CHALLENGES (built by home.js) -->
+
+        <section class="card sidebar-card">
+
+            <div class="sidebar-heading">
+                <span class="section-label">CHALLENGES</span>
+                <a href="#">See all</a>
+            </div>
+
+            <div id="home-challenges"></div>
+
+        </section>
+
+
+
+        <!-- BADGES (built by home.js) -->
+
+        <section class="card sidebar-card">
+
+            <span class="section-label">BADGES</span>
+
+            <div class="badges" id="home-badges"></div>
+
+        </section>
+
+
+    </aside>
+
+
+</main>
+
+
+<!-- shared.js must load first -->
+<script src="/shared.js"></script>
+<script src="/home.js"></script>
+
+</body>
+
+</html>

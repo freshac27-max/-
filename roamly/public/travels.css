@@ -1,0 +1,719 @@
+/* =========================================
+   ROAMLY — MY TRAVELS PAGE
+========================================= */
+
+.travels-page {
+    width: min(1500px, calc(100% - 48px));
+    margin: 36px auto 70px;
+}
+
+.eyebrow {
+    display: block;
+    margin-bottom: 6px;
+
+    color: var(--purple);
+
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.travels-hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 28px;
+}
+
+.travels-hero h1 {
+    margin: 0 0 7px;
+    font-size: 34px;
+    letter-spacing: -1px;
+}
+
+.travels-hero p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.share-button {
+    flex-shrink: 0;
+
+    padding: 11px 18px;
+
+    border: 1px solid var(--border);
+    border-radius: 12px;
+
+    background: var(--card);
+    color: var(--text);
+
+    font-weight: 600;
+
+    transition: 0.2s ease;
+}
+
+.share-button:hover {
+    border-color: var(--purple);
+    color: var(--purple);
+}
+
+
+/* =========================================
+   STAT CARDS
+========================================= */
+
+.travel-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-bottom: 24px;
+}
+
+.stat-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    padding: 22px;
+
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.stat-icon {
+    width: 50px;
+    height: 50px;
+
+    flex-shrink: 0;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 14px;
+
+    background: var(--purple-light);
+
+    font-size: 24px;
+}
+
+.stat-card strong {
+    display: block;
+    margin-bottom: 2px;
+
+    font-size: 26px;
+    letter-spacing: -0.5px;
+}
+
+.stat-card div > span {
+    color: var(--text-soft);
+    font-size: 12px;
+}
+
+
+/* =========================================
+   EUROPE PROGRESS
+========================================= */
+
+.continent-progress {
+    padding: 26px;
+    margin-bottom: 24px;
+}
+
+.continent-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 20px;
+    margin-bottom: 18px;
+}
+
+.continent-header h2 {
+    margin: 0;
+    font-size: 22px;
+    letter-spacing: -0.6px;
+}
+
+.continent-percentage {
+    text-align: right;
+}
+
+.continent-percentage strong {
+    display: block;
+    color: var(--purple);
+    font-size: 26px;
+}
+
+.continent-percentage span {
+    color: var(--text-soft);
+    font-size: 11px;
+}
+
+.large-progress-bar {
+    width: 100%;
+    height: 10px;
+
+    margin-bottom: 24px;
+
+    overflow: hidden;
+
+    border-radius: 999px;
+
+    background: var(--purple-light);
+}
+
+#progress-fill {
+    height: 100%;
+
+    border-radius: inherit;
+
+    background: var(--purple);
+
+    transition: width 0.4s ease;
+}
+
+
+/* =========================================
+   MAP PLACEHOLDER
+========================================= */
+
+.europe-map {
+    position: relative;
+
+    min-height: 240px;
+
+    padding: 30px;
+
+    display: grid;
+    place-items: center;
+
+    overflow: hidden;
+
+    border: 1px dashed #d8d0ff;
+    border-radius: 16px;
+
+    background: linear-gradient(135deg, #f4f1ff, #fafaff);
+
+    text-align: center;
+}
+
+.map-decoration {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.map-decoration img {
+    position: absolute;
+
+    width: 36px;
+    height: auto;
+
+    border-radius: 4px;
+
+    opacity: 0.35;
+}
+
+.map-decoration img:nth-child(1) { top: 18%; left: 10%; }
+.map-decoration img:nth-child(2) { top: 62%; left: 16%; }
+.map-decoration img:nth-child(3) { top: 30%; left: 28%; }
+.map-decoration img:nth-child(4) { top: 72%; left: 36%; }
+.map-decoration img:nth-child(5) { top: 16%; left: 68%; }
+.map-decoration img:nth-child(6) { top: 66%; left: 64%; }
+.map-decoration img:nth-child(7) { top: 34%; left: 84%; }
+.map-decoration img:nth-child(8) { top: 74%; left: 86%; }
+
+.map-message {
+    position: relative;
+    max-width: 320px;
+}
+
+.map-globe {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 42px;
+}
+
+.map-message h3 {
+    margin: 0 0 6px;
+    font-size: 16px;
+}
+
+.map-message p {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   VISITED COUNTRIES
+========================================= */
+
+.visited-section {
+    margin-bottom: 24px;
+    padding: 26px;
+
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.visited-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 20px;
+    margin-bottom: 22px;
+}
+
+.visited-heading h2 {
+    margin: 0 0 6px;
+    font-size: 22px;
+    letter-spacing: -0.6px;
+}
+
+.visited-heading p {
+    margin: 0;
+    font-size: 12px;
+}
+
+.visited-total {
+    flex-shrink: 0;
+
+    padding: 7px 11px;
+
+    border-radius: 100px;
+
+    background: var(--purple-light);
+    color: var(--purple);
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.visited-countries-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+    gap: 12px;
+}
+
+.visited-country-card {
+    min-height: 72px;
+    padding: 13px;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    border: 1px solid #ded9fb;
+    border-radius: 13px;
+
+    background: linear-gradient(135deg, white, #faf9ff);
+}
+
+.visited-flag {
+    width: 46px;
+    height: 46px;
+
+    flex-shrink: 0;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 11px;
+
+    background: var(--purple-light);
+}
+
+.visited-flag .flag-img {
+    width: 32px;
+    height: 24px;
+}
+
+.visited-country-card strong {
+    display: block;
+    margin-bottom: 3px;
+    font-size: 12px;
+}
+
+.visited-country-card span {
+    color: var(--text-soft);
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.visited-empty {
+    grid-column: 1 / -1;
+
+    min-height: 95px;
+    padding: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+
+    border: 1px dashed #d9d2ff;
+    border-radius: 13px;
+
+    background: #fbfaff;
+}
+
+.visited-empty > span {
+    font-size: 27px;
+}
+
+.visited-empty strong {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 12px;
+}
+
+.visited-empty p {
+    margin: 0;
+    font-size: 11px;
+}
+
+
+/* =========================================
+   ALL COUNTRIES
+========================================= */
+
+.countries-section {
+    padding: 26px;
+
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.countries-heading {
+    margin-bottom: 20px;
+}
+
+.countries-heading h2 {
+    margin: 0 0 5px;
+    font-size: 22px;
+    letter-spacing: -0.6px;
+}
+
+.countries-heading p {
+    margin: 0;
+    font-size: 13px;
+}
+
+
+/* =========================================
+   SEARCH + FILTERS
+========================================= */
+
+.country-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.country-search {
+    position: relative;
+    flex: 1;
+    max-width: 420px;
+}
+
+.country-search span {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    color: #9696a0;
+    font-size: 16px;
+
+    pointer-events: none;
+}
+
+.country-search input {
+    width: 100%;
+
+    padding: 12px 15px 12px 38px;
+
+    border: 1px solid var(--border);
+    border-radius: 12px;
+
+    background: #fafafd;
+    color: var(--text);
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: 0.2s ease;
+}
+
+.country-search input:focus {
+    background: white;
+    border-color: var(--purple);
+    box-shadow: 0 0 0 3px rgba(108, 76, 241, 0.08);
+}
+
+.country-filters {
+    display: flex;
+    gap: 8px;
+}
+
+.filter-button {
+    padding: 9px 14px;
+
+    border: 1px solid var(--border);
+    border-radius: 10px;
+
+    background: white;
+    color: var(--text-soft);
+
+    font-weight: 600;
+    white-space: nowrap;
+
+    transition: 0.2s ease;
+}
+
+.filter-button:hover {
+    color: var(--purple);
+    border-color: #d8d0ff;
+}
+
+.filter-button.active {
+    background: var(--purple);
+    border-color: var(--purple);
+    color: white;
+}
+
+
+/* =========================================
+   COUNTRY GRID + CARDS
+========================================= */
+
+.countries-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 14px;
+}
+
+.country-card {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    padding: 15px;
+
+    border: 1px solid var(--border);
+    border-radius: 14px;
+
+    background: white;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.country-card:hover {
+    transform: translateY(-2px);
+    border-color: #d8d0ff;
+    box-shadow: 0 8px 22px rgba(30, 25, 70, 0.06);
+}
+
+.country-card.visited {
+    background: #faf9ff;
+    border-color: #d9d1ff;
+}
+
+.flag-img {
+    display: block;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.07);
+}
+
+.country-flag {
+    flex-shrink: 0;
+}
+
+.country-flag .flag-img {
+    width: 44px;
+    height: 33px;
+    border-radius: 6px;
+}
+
+.country-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.country-info h3 {
+    margin: 0;
+
+    font-size: 14px;
+    font-weight: 650;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.visit-button {
+    flex-shrink: 0;
+
+    padding: 7px 10px;
+
+    border: 1px solid var(--border);
+    border-radius: 9px;
+
+    background: white;
+    color: var(--text-soft);
+
+    font-size: 11px;
+    font-weight: 700;
+
+    transition: 0.2s ease;
+}
+
+.visit-button:hover {
+    color: var(--purple);
+    border-color: var(--purple);
+}
+
+.country-card.visited .visit-button {
+    background: var(--purple-light);
+    border-color: transparent;
+    color: var(--purple);
+}
+
+
+/* =========================================
+   LOADING + EMPTY
+========================================= */
+
+.countries-loading {
+    padding: 50px 20px;
+    text-align: center;
+    color: var(--text-soft);
+}
+
+.loader {
+    width: 28px;
+    height: 28px;
+
+    margin: 0 auto 12px;
+
+    border: 3px solid var(--purple-light);
+    border-top-color: var(--purple);
+    border-radius: 50%;
+
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.empty-state {
+    grid-column: 1 / -1;
+    padding: 70px 20px;
+    text-align: center;
+    color: var(--text-soft);
+}
+
+.empty-state span {
+    font-size: 45px;
+}
+
+.empty-state h3 {
+    margin: 15px 0 5px;
+}
+
+.empty-state p {
+    margin: 0;
+    font-size: 12px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .travel-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    .travels-page {
+        width: calc(100% - 28px);
+        margin-top: 24px;
+    }
+
+    .travels-hero,
+    .visited-heading {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .country-toolbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .country-search {
+        max-width: none;
+    }
+
+    .country-filters {
+        overflow-x: auto;
+    }
+
+    .countries-grid,
+    .visited-countries-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .visited-section,
+    .countries-section,
+    .continent-progress {
+        padding: 20px;
+    }
+
+}
+
+@media (max-width: 450px) {
+
+    .travel-stats {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .loader { animation-duration: 2s; }
+
+    #progress-fill,
+    .country-card {
+        transition: none;
+    }
+
+}

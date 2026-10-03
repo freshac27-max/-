@@ -1,0 +1,11 @@
+{
+  "name": "roamly",
+  "private": true,
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "dotenv": "^18.0.5",
+    "express": "^5.2.1"
+  }
+}

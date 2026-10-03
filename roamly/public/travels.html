@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>My Travels — Roamly</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/travels.css">
+</head>
+
+
+<body>
+
+  <!-- =========================================
+       NAVBAR
+  ========================================== -->
+
+  <header class="topbar">
+
+    <div class="topbar-inner">
+
+      <a class="logo" href="/">
+        ROAMLY <span>✈</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="/">Home</a>
+        <a href="#">Explore</a>
+        <a class="active" href="/travels.html">My Travels</a>
+        <a href="#">Challenges</a>
+      </nav>
+
+
+      <div class="nav-actions">
+
+        <div class="search">
+          <span>⌕</span>
+          <input type="text" placeholder="Search countries, users, trips...">
+        </div>
+
+        <button class="notification-button">♡</button>
+
+        <div class="nav-profile">
+          <div class="avatar small-avatar">A</div>
+          <span>Annish</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+
+  <main class="travels-page">
+
+
+    <!-- =========================================
+         HERO
+    ========================================== -->
+
+    <section class="travels-hero">
+
+      <div class="hero-copy">
+
+        <span class="eyebrow">YOUR WORLD</span>
+
+        <h1>My Travels</h1>
+
+        <p>
+          Every country tells a story. Keep track of
+          everywhere you've explored.
+        </p>
+
+      </div>
+
+      <button class="share-button">↗ Share my map</button>
+
+    </section>
+
+
+
+    <!-- =========================================
+         STATS
+    ========================================== -->
+
+    <section class="travel-stats">
+
+      <div class="stat-card">
+        <span class="stat-icon">🌍</span>
+        <div>
+          <strong id="visited-count">0</strong>
+          <span>Countries visited</span>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <span class="stat-icon">🧭</span>
+        <div>
+          <strong id="travel-percentage">0%</strong>
+          <span>Europe explored</span>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <span class="stat-icon">⭐</span>
+        <div>
+          <strong id="challenges-completed">0</strong>
+          <span>Challenges completed</span>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <span class="stat-icon">📍</span>
+        <div>
+          <strong id="remaining-count">--</strong>
+          <span>Still to explore</span>
+        </div>
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         EUROPE PROGRESS
+    ========================================== -->
+
+    <section class="card continent-progress">
+
+      <div class="continent-header">
+
+        <div>
+          <span class="eyebrow">CURRENT REGION</span>
+          <h2>Exploring Europe</h2>
+        </div>
+
+        <div class="continent-percentage">
+          <strong id="progress-percentage">0%</strong>
+          <span>explored</span>
+        </div>
+
+      </div>
+
+
+      <div class="large-progress-bar">
+        <div id="progress-fill" style="width: 0%"></div>
+      </div>
+
+
+      <!-- Map placeholder for now -->
+
+      <div class="europe-map">
+
+        <div class="map-decoration">
+          <img src="https://flagcdn.com/w80/gb.png" alt="">
+          <img src="https://flagcdn.com/w80/fr.png" alt="">
+          <img src="https://flagcdn.com/w80/es.png" alt="">
+          <img src="https://flagcdn.com/w80/de.png" alt="">
+          <img src="https://flagcdn.com/w80/it.png" alt="">
+          <img src="https://flagcdn.com/w80/gr.png" alt="">
+          <img src="https://flagcdn.com/w80/dk.png" alt="">
+          <img src="https://flagcdn.com/w80/pl.png" alt="">
+        </div>
+
+        <div class="map-message">
+          <span class="map-globe">🌍</span>
+          <h3>Your Europe map</h3>
+          <p>Countries you've visited will light up here soon.</p>
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         VISITED COUNTRIES
+    ========================================== -->
+
+    <section class="visited-section">
+
+      <div class="visited-heading">
+
+        <div>
+          <span class="eyebrow">YOUR COLLECTION</span>
+          <h2>Visited countries</h2>
+          <p>Everywhere you've been so far.</p>
+        </div>
+
+        <span class="visited-total" id="visited-section-count">
+          0 countries
+        </span>
+
+      </div>
+
+      <div
+        class="visited-countries-grid"
+        id="visited-countries-container"
+      ></div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         ALL COUNTRIES
+    ========================================== -->
+
+    <section class="countries-section">
+
+      <div class="countries-heading">
+        <span class="eyebrow">YOUR JOURNEY</span>
+        <h2>Countries</h2>
+        <p>Mark the countries you've explored.</p>
+      </div>
+
+
+      <div class="country-toolbar">
+
+        <div class="country-search">
+          <span>⌕</span>
+          <input
+            id="country-search"
+            type="text"
+            placeholder="Search countries..."
+          >
+        </div>
+
+        <div class="country-filters">
+          <button class="filter-button active" data-filter="all">All</button>
+          <button class="filter-button" data-filter="visited">✓ Visited</button>
+          <button class="filter-button" data-filter="unvisited">Not visited</button>
+        </div>
+
+      </div>
+
+
+      <!-- JavaScript builds the country cards here -->
+      <div class="countries-grid" id="countries-container"></div>
+
+
+      <div class="countries-loading" id="countries-loading">
+        <div class="loader"></div>
+        <span>Loading countries...</span>
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- shared.js must load first -->
+  <script src="/shared.js"></script>
+  <script src="/travels.js"></script>
+
+</body>
+
+</html>
